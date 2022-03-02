@@ -1,1 +1,19 @@
 
+using System;
+using System.Linq;
+
+public class Example
+{
+	public static void Main()
+	{
+		int[] array1 = { 2,3,1,6 };
+		int[] array2 = { 4,8,1,2 };
+		int[] array3 = { 9,2 };
+
+		int sum1 = array1.Sum();
+		int sum2 = array2.Sum();
+		int sum3 = array3.Sum();
+		string output = "["+sum1+","+sum2+","+sum3+"]";
+		Console.WriteLine(output);
+	}
+}
