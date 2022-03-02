@@ -1,0 +1,27 @@
+
+using System;  
+public class question8  
+{  
+    public static void Main(){
+    	string str="";
+    	int i, len, vowel, cons;
+      	
+      	str = "confidence"; 	
+      	Console.Write("Recived String : "+str);
+
+    	vowel = 0;
+    	cons = 0;
+    	len = str.Length;
+
+    	for(i=0; i<len; i++){
+        	if(str[i] =='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' || str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U'){
+            	vowel++;
+        	}
+        	else if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z')){
+            cons++;
+        	}
+    	}
+   		Console.Write("\nThe number of vowels in "+str+" is {0}\n", vowel);
+   		Console.Write("The number of consonant in "+str+" is : {0}\n\n", cons);
+	}
+}

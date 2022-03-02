@@ -1,0 +1,13 @@
+<form method="post">
+<input type="text" name="ipadd" />
+</form>
+
+<?php
+$ipadd = $_POST['ipadd'];
+
+if (filter_var($ipadd, FILTER_VALIDATE_IP)){
+    echo("$ipadd is a valid IP address");
+    } else {
+        echo("$ipadd is not a valid IP address");
+    }
+?>

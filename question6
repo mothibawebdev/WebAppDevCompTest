@@ -1,0 +1,32 @@
+<?php
+
+function bubblesort(&$Array, $n) {
+  $temp;
+  for($i=0; $i<$n; $i++) {
+    for($j=0; $j<$n-$i-1; $j++) {
+      if($Array[$j]>$Array[$j+1]) {
+        $temp = $Array[$j];
+        $Array[$j] = $Array[$j+1];
+        $Array[$j+1] = $temp;
+      }
+    }
+  }
+}
+
+
+function PrintArray($Array, $n) { 
+  for ($i = 0; $i < $n; $i++) 
+    echo $Array[$i]." ";
+  echo "\n"; 
+} 
+
+
+$MyArray = array(64, 34, 25, 12, 22, 11, 90);
+$n = sizeof($MyArray); 
+echo "Original Array\n";
+PrintArray($MyArray, $n);
+
+bubblesort($MyArray, $n);
+echo "\nSorted Array\n";
+PrintArray($MyArray, $n);
+?>

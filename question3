@@ -1,0 +1,22 @@
+using System;
+using System.IO;  
+public class question3  
+{  
+    public static void Main(){
+    	string connetionString = null;
+        SqlConnection connection ;
+		connetionString = "Data Source=SRVWINSQL001;Initial Catalog=ThirdParty;User ID=01462596;Password=H3cde@#k(^.D5e!";
+        connection = new SqlConnection(connetionString);
+
+        string FileName = "Users.csv";
+        string[] lines = System.IO.File.ReadAllLines(FileName);
+        foreach(string line in lines)
+		{
+    		string[] columns = line.Split(',');
+    			foreach (string column in columns) {
+        			InsertItemQry = "Insert into Users(LastName,FirstName,Email,Telephone) Values(columns)";
+
+    			}
+		}
+	}
+}
